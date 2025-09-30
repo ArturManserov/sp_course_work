@@ -1,0 +1,15 @@
+#program <_M1K> ; 
+start variable integer_4 _A1B , _A2B , _B1C , _B2C , _C1D;
+  input ( _A1B )
+  input ( _A2B )
+
+  for _B1C := _A1B to _A2B do
+    output ( _B1C * _B1C )
+
+  _C1D := 0
+  for _B1C := 1 to _A1B do
+    for _B2C := 1 to _A1B do
+      _C1D := _C1D + 1 
+  output ( _C1D )
+
+stop
