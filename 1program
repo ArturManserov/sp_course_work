@@ -1,0 +1,18 @@
+#program <_M1K> ; 
+start variable integer_4 _A1B , _A2B , _A3B , _A4B ;
+  input ( _A1B );
+  input ( _A2B );
+  
+  output ( _A1B + _A2B );
+  output ( _A1B - _A2B );
+  output ( _A1B * _A2B );
+  output ( _A1B / _A2B );
+  output ( _A1B % _A2B );
+
+(_A1B - _A2B) * 10 + (_A1B + _A2B) / 10 := _A3B;
+_A3B + _A3B % 10 := _A4B;
+
+  output ( _A3B );
+  output ( _A4B );
+
+stop
