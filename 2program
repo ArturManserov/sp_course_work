@@ -1,0 +1,34 @@
+#program <_M1K> ; 
+start variable integer_4 _A1B , _A2B , _A3B , _MAX1 ;
+  input ( _A1B )
+  input ( _A2B )
+  input ( _A3B )
+
+  if _A1B >= _A2B && _A1B >= _A3B {
+    _MAX1 := _A1B
+  } else IF _A2B >= _A1B && _A2B >= _A3B {
+    _MAX1 := _A2B
+  } else {
+    _MAX1 := _A3B
+  }
+  output ( _MAX1 )
+
+  if ( _A1B == _A2B ) && ( _A1B == _A3B ) && ( _A2B == _A3B ) {
+    output ( 1 )
+  } else {
+    output ( 0 )
+  }
+    
+  if !! ( _A1B >= 0 ) || !! ( _A2B >= 0 ) || !! ( _A3B >= 0 ) {
+    output ( -1 )
+  } else {
+    output ( 0 )
+  }
+
+  if _A1B >= ( _A2B + _A3B ) {
+    output ( 10 )
+  } else {
+    output ( 0 )
+  }
+ 
+stop
