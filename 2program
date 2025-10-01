@@ -6,7 +6,7 @@ start variable integer_4 _A1B , _A2B , _A3B , _MAX1 ;
 
   if _A1B >= _A2B && _A1B >= _A3B {
     _MAX1 := _A1B
-  } else IF _A2B >= _A1B && _A2B >= _A3B {
+  } else if _A2B >= _A1B && _A2B >= _A3B {
     _MAX1 := _A2B
   } else {
     _MAX1 := _A3B
