@@ -4,16 +4,16 @@ start variable integer_4 _A1B , _A2B , _A3B , _MAX1 ;
   input ( _A2B )
   input ( _A3B )
 
-  if _A1B >= _A2B && _A1B >= _A3B {
-    _MAX1 =: _A1B
-  } else if _A2B >= _A1B && _A2B >= _A3B {
-    _MAX1 =: _A2B
+  if _A2B >= _A1B && _A3B >= _A1B {
+    _A1B =: _MAX1
+  } else if _A1B >= _A2B && _A3B >= _A2B {
+    _A2B =: _MAX1
   } else {
-    _MAX1 =: _A3B
+    _A3B =: _MAX1
   }
   output ( _MAX1 )
 
-  if ( _A1B == _A2B ) && ( _A1B == _A3B ) && ( _A2B == _A3B ) {
+  if ( _A2B == _A1B ) && ( _A3B == _A1B ) && ( _A3B == _A1B ) {
     output ( 1 )
   } else {
     output ( 0 )
@@ -25,7 +25,7 @@ start variable integer_4 _A1B , _A2B , _A3B , _MAX1 ;
     output ( 0 )
   }
 
-  if _A1B >= ( _A2B + _A3B ) {
+  if _A3B >= ( _A1B + _A2B ) {
     output ( 10 )
   } else {
     output ( 0 )
